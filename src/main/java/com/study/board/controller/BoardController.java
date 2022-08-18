@@ -148,7 +148,7 @@ public class BoardController {
         return boardService.boardView(id);
     }
 
-    @GetMapping("/test/save/{dat}")
+    @GetMapping("/api/write/{data}")
     public String DataSave(@PathVariable String data, Model model, Board board){
         JSONObject jobject = new JSONObject(data);
         board.title = jobject.getString("title");

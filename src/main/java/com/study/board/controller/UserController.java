@@ -46,4 +46,22 @@ public class UserController {
         return userService.getAllUsers();
     }
 
+    @GetMapping("/api/signup/{data}")
+    public String DataSave(@PathVariable String data, Model model, User user){
+        JSONObject jobject = new JSONObject(data);
+
+        user.userid = jobject.getString("userid");
+        user.userpw = jobject.getString("userpw");
+        user.username = jobject.getString("username");
+        user.userbirthday = jobject.getString("userbirthday");
+        user.usergender = jobject.getString("usergender");
+        user.useremail = jobject.getString("useremail");
+
+       userService.write(user);
+
+        model.addAttribute("message","글 작성이 완료되었습니다.");
+        model.addAttribute("searchUrl", "/board/list");
+
+        return "message";
+    }
 }
