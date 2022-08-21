@@ -19,24 +19,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/board/signin")
-    public String userSignin() {
-
-        return "usersignin";
-    }
-
-    @GetMapping("/board/signup")
-    public String userSignup() {
-
-        return "usersignup";
-    }
-
-    @PostMapping("/board/signuppro")
-    public String userSignupPro(User user) {
-        userService.write(user);
-        return "redirect:/login";
-    }
-
     @PostMapping("/api/users/reg")
     public String userRegister(User user, Model model) {
         user.useremail = user.useremail + "@khu.ac.kr";
@@ -52,26 +34,5 @@ public class UserController {
     @ResponseBody
     public List<User> getAllUsers() {
         return userService.getAllUsers();
-    }
-
-    @PostMapping("/api/test")
-    public String test(@RequestBody String param, User user, Model model){
-        JSONObject jobject = new JSONObject(param);
-
-        user.userid = jobject.getString("userid");
-        user.userpw = jobject.getString("userpw");
-        user.username = jobject.getString("username");
-        user.useryear = jobject.getString("useryear");
-        user.usermonth = jobject.   getString("usermonth");
-        user.userdate = jobject.getString("userdate");
-        user.usergender = jobject.getString("usergender");
-        user.useremail = jobject.getString("useremail");
-
-        userService.write(user);
-
-        model.addAttribute("message","글 작성이 완료되었습니다.");
-        model.addAttribute("searchUrl", "/login");
-
-        return "message";
     }
 }
