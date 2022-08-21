@@ -42,4 +42,10 @@ public class CommentController {
     public List<Comment> getCategoryData(@PathVariable("postid") Integer postid) {
         return commentService.getPostidData(postid);
     }
+
+    @GetMapping("/api/comment/id/{id}")
+    @ResponseBody
+    public Comment getIdData(@PathVariable("id") Integer id) {
+        return commentService.view(id);
+    }
 }

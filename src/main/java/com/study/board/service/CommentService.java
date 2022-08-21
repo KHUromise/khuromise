@@ -24,6 +24,11 @@ public class CommentService {
         commentRepository.deleteById(id);
     }
 
+    public Comment view(Integer id){
+
+        return commentRepository.findById(id).get();
+    }
+
     @Transactional
     public List<Comment> getPostidData(Integer postid){
         return commentRepository.findByPostidContaining(postid);
