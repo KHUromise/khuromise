@@ -171,8 +171,8 @@ public class BoardController {
         board.category = jobject.getString("category");
         board.date = jobject.getString("date");
         board.noon = jobject.getString("noon");
-        board.hour = jobject.getInt("hour");
-        board.minute = jobject.getInt("minute");
+        board.hour = jobject.getString("hour");
+        board.minute = jobject.getString("minute");
         board.currentpeople = 1;
         board.maxpeople = jobject.getInt("maxpeople");
         board.genderdisplay = jobject.getString("genderdisplay");
