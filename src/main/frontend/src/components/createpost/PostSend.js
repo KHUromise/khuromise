@@ -14,9 +14,9 @@ const PostBox = styled.div`
 
 function PostSend({ titlevalue , contentvalue, noonvalue, hourvalue, minutevalue, peoplenumvalue, datevalue, purposevalue, gendervalue, positionvalue, placenamevalue }) {
 
-  const users = useFetch(`http://localhost:3002/users`);
+  const users = useFetch(`/api/users`);
   const findUsers = [...users]
-  const findUser = findUsers.find((user)=>user.userId === sessionStorage.getItem('LoginUserInfo')) || {};
+  const findUser = findUsers.find((user)=>user.userid === sessionStorage.getItem('LoginUserInfo')) || {};
 
   const nextId = useContext(NextPostIdContext);
   console.log(nextId);
@@ -38,6 +38,8 @@ function PostSend({ titlevalue , contentvalue, noonvalue, hourvalue, minutevalue
 
   function onSubmit(e) {
     e.preventDefault();
+    const submitForm = document.querySelector("#createpost");
+
     
     if (gender !== findUser.userGender && gender !== 'b') {
       alert("성별을 확인해 주세요.")
@@ -68,12 +70,18 @@ function PostSend({ titlevalue , contentvalue, noonvalue, hourvalue, minutevalue
           "placeName" : placenamevalue
         }),
       })
-      .then(res =>{
-        if (res.ok) {
-          alert("등록이 완료되었습니다");
-          navigate(`/${purposevalue}`);
-        }
-      })
+          .then(res => res.json())
+          .then(res => {
+            if (res) {
+              submitForm.submit();
+            }
+          })
+      // .then(res =>{
+      //   if (res.ok) {
+      //     alert("등록이 완료되었습니다");
+      //     navigate(`/${purposevalue}`);
+      //   }
+      // })
     }
   }
   
@@ -84,6 +92,7 @@ function PostSend({ titlevalue , contentvalue, noonvalue, hourvalue, minutevalue
           display : 'flex',
           justifyContent : 'center'}} 
         onSubmit = {onSubmit}
+        id = "createpost"
       >
         <button style={{
           width : '80%',

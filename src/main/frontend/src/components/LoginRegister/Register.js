@@ -172,7 +172,6 @@ const Register = () => {
 
   //ID 중복확인
   const users = useFetch(`/api/users`);
-  console.log((users))
   const [canId, setCanId] = useState(null);
 
   const idCheckClick = () => {

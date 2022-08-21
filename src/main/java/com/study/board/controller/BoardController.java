@@ -3,6 +3,7 @@ package com.study.board.controller;
 import com.study.board.entity.Board;
 import com.study.board.entity.User;
 import com.study.board.service.BoardService;
+import org.apache.tomcat.util.json.JSONParser;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -170,6 +171,17 @@ public class BoardController {
 
         model.addAttribute("message", "글 작성이 완료되었습니다.");
         model.addAttribute("searchUrl", "/board/list");
+
+        return "message";
+    }
+
+    @PostMapping("/api/posts/write")
+    public String createPost(Board board, Model model) {
+
+        boardService.write(board);
+
+        model.addAttribute("message", "글 작성이 완료되었습니다.");
+        model.addAttribute("searchUrl", "/");
 
         return "message";
     }
