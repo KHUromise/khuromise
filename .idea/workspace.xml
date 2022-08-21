@@ -5,82 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dfcc8c3-9a55-4b81-8397-78138e7da488" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bin/main/static/static/js/main.28977d2d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/main/static/static/js/main.28977d2d.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/main/static/static/js/main.28977d2d.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/main/static/static/js/main.7c4cdba7.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/main/static/static/js/main.7c4cdba7.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/main/static/static/js/main.7c4cdba7.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/main/static/static/js/main.c7ebd3bc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/main/static/static/js/main.c7ebd3bc.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/main/static/static/js/main.c7ebd3bc.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/static/static/js/main.28977d2d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/static/static/js/main.28977d2d.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/static/static/js/main.28977d2d.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/static/static/js/main.7c4cdba7.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/static/static/js/main.7c4cdba7.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/static/static/js/main.7c4cdba7.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/static/static/js/main.c7ebd3bc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/static/static/js/main.c7ebd3bc.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/static/static/js/main.c7ebd3bc.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/static/static/js/main.28977d2d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/static/static/js/main.28977d2d.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/static/static/js/main.28977d2d.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/static/static/js/main.7c4cdba7.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/static/static/js/main.7c4cdba7.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/static/static/js/main.7c4cdba7.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/static/static/js/main.c7ebd3bc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/static/static/js/main.c7ebd3bc.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/static/static/js/main.c7ebd3bc.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/js/main.28977d2d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/js/main.28977d2d.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/js/main.28977d2d.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/js/main.7c4cdba7.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/js/main.7c4cdba7.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/js/main.7c4cdba7.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/js/main.c7ebd3bc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/js/main.c7ebd3bc.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/js/main.c7ebd3bc.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/com/study/board/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/com/study/board/controller/BoardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/com/study/board/entity/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/com/study/board/entity/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/static/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/study/board/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/study/board/controller/BoardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/study/board/entity/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/study/board/entity/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/board-0.0.1-SNAPSHOT-plain.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/board-0.0.1-SNAPSHOT-plain.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/board-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/board-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.study.board.BoardApplicationTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.study.board.BoardApplicationTests.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.study.board.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.study.board.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.study.board.BoardApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.study.board.BoardApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/static/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/components/createpost/CreatePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/components/createpost/CreatePost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/components/createpost/PostSend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/components/createpost/PostSend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/components/modifypost/ModGenderList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/components/modifypost/ModGenderList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/components/modifypost/ModMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/components/modifypost/ModMap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/components/modifypost/ModPeoplenum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/components/modifypost/ModPeoplenum.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/components/modifypost/ModPlace.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/components/modifypost/ModPlace.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/components/modifypost/ModSend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/components/modifypost/ModSend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/components/modifypost/ModTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/components/modifypost/ModTime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/components/modifypost/ModifyPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/components/modifypost/ModifyPost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,20 +88,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Spring Boot.BoardApplication">
     <configuration name="khuromise [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
