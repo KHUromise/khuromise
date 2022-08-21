@@ -20,7 +20,11 @@ public class User {
 
     public String usergender;
 
-    public String userbirthday;
+    public String useryear;
+
+    public String usermonth;
+
+    public String userdate;
 
     public String useremail;
 }

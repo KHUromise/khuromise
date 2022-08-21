@@ -14,15 +14,16 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @Controller
-// @RequestMapping("/api")
+//@RequestMapping("/api")
 public class BoardController {
 
     @Autowired
     private BoardService boardService;
 
-    @GetMapping("/board/write") // localhost:8080/board/write
-    public String boardWriteForm() {
+    @GetMapping("/board/write")//localhost:8080/board/write
+    public String boardWriteForm(){
 
         return "boardwrite";
     }
@@ -32,32 +33,35 @@ public class BoardController {
 
         boardService.write(board);
 
-        model.addAttribute("message", "글 작성이 완료되었습니다.");
+        model.addAttribute("message","글 작성이 완료되었습니다.");
         model.addAttribute("searchUrl", "/board/list");
 
         return "message";
     }
 
     @GetMapping("/board/list")
-    public String boardList(Model model,
-            @PageableDefault(page = 0, size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable,
-            String searchKeyword, String searchTitle) {
+    public String boardList(Model model, @PageableDefault(page = 0, size = 10, sort = "id",
+            direction = Sort.Direction.DESC) Pageable pageable,
+                            String searchKeyword, String searchTitle){
 
         Page<Board> list = null;
 
-        if (searchKeyword == null) {
-            if (searchTitle == null) {
+        if(searchKeyword == null){
+            if(searchTitle == null){
                 list = boardService.boardList(pageable);
-            } else {
+            }
+            else{
                 list = boardService.boardSearchTitle(searchTitle, pageable);
             }
-        } else {
+        }
+        else{
             list = boardService.boardSearchCategory(searchKeyword, pageable);
         }
 
         int nowPage = list.getPageable().getPageNumber() + 1;
         int startPage = Math.max(nowPage - 4, 1);
         int endPage = Math.min(nowPage + 5, list.getTotalPages());
+
 
         model.addAttribute("list", list);
         model.addAttribute("nowPage", nowPage);
@@ -68,14 +72,14 @@ public class BoardController {
     }
 
     @GetMapping("/board/view")
-    public String boardView(Model model, Integer id) {
+    public String boardView(Model model, Integer id){
 
         model.addAttribute("board", boardService.boardView(id));
         return "boardview";
     }
 
-    @GetMapping("/board/delete")
-    public String boardDelete(Integer id) {
+    @GetMapping("/board/delete/{id}")
+    public String boardDelete(@PathVariable Integer id){
 
         boardService.boardDelete(id);
 
@@ -83,7 +87,7 @@ public class BoardController {
     }
 
     @GetMapping("/board/modify/{id}")
-    public String boardModify(@PathVariable("id") Integer id, Model model) {
+    public String boardModify(@PathVariable("id") Integer id, Model model){
 
         model.addAttribute("board", boardService.boardView(id));
 
@@ -91,14 +95,15 @@ public class BoardController {
     }
 
     @PostMapping("/board/sign/{id}")
-    public String boardSign(@PathVariable("id") Integer id, Model model, Board board) {
+    public String boardSign(@PathVariable("id") Integer id, Model model, Board board){
 
         Board boardTemp = boardService.boardView(id);
-        if (boardTemp.currentpeople < boardTemp.maxpeople) {
+        if(boardTemp.currentpeople < boardTemp.maxpeople) {
             boardTemp.currentpeople += 1;
             boardService.write(boardTemp);
             model.addAttribute("message", "신청되었습니다.");
-        } else {
+        }
+        else{
             model.addAttribute("message", "정원 초과입니다");
         }
         model.addAttribute("searchUrl", "/board/list");
@@ -107,7 +112,7 @@ public class BoardController {
     }
 
     @PostMapping("board/update/{id}")
-    public String boardUpdate(@PathVariable("id") Integer id, Board board, Model model) {
+    public String boardUpdate(@PathVariable("id") Integer id, Board board, Model model){
 
         Board boardTemp = boardService.boardView(id);
         boardTemp.setTitle(board.getTitle());
@@ -124,7 +129,7 @@ public class BoardController {
 
         boardService.write(boardTemp);
 
-        model.addAttribute("message", "글 수정이 완료되었습니다.");
+        model.addAttribute("message","글 수정이 완료되었습니다.");
         model.addAttribute("searchUrl", "/board/list");
 
         return "message";
@@ -132,19 +137,19 @@ public class BoardController {
 
     @GetMapping("/api/posts")
     @ResponseBody
-    public List<Board> getAllData() {
+    public List<Board> getAllData(){
         return boardService.getAllData();
     }
 
     @GetMapping("/api/posts/{category}")
     @ResponseBody
-    public List<Board> getCategoryData(@PathVariable String category) {
+    public List<Board> getCategoryData(@PathVariable String category){
         return boardService.getCategoryData(category);
     }
 
     @GetMapping("/api/posts/id/{id}")
     @ResponseBody
-    public Board getIdData(@PathVariable("id") Integer id) {
+    public Board getIdData(@PathVariable("id") Integer id){
         return boardService.boardView(id);
     }
 
@@ -156,13 +161,14 @@ public class BoardController {
         board.category = jobject.getString("category");
         board.date = jobject.getString("date");
         board.noon = jobject.getString("noon");
-        board.hour = jobject.getInt("hour");
-        board.minute = jobject.getInt("minute");
+        board.hour = jobject.getString("hour");
+        board.minute = jobject.getString("minute");
         board.currentpeople = 1;
         board.maxpeople = jobject.getInt("maxpeople");
         board.genderdisplay = jobject.getString("genderdisplay");
         board.placename = jobject.getString("placename");
         board.position = jobject.getString("position");
+
 
         boardService.write(board);
 
@@ -170,5 +176,37 @@ public class BoardController {
         model.addAttribute("searchUrl", "/board/list");
 
         return "message";
+    }
+
+    @PostMapping("/api/posts/modify/{id}")
+    public String boardModify(@PathVariable("id") Integer id, @RequestBody Board board, Model model){
+        Board boardTemp = boardService.boardView(id);
+
+        boardTemp.setTitle(board.getTitle());
+        boardTemp.setContent(board.getContent());
+        boardTemp.setCategory(board.getCategory());
+        boardTemp.setDate(board.getDate());
+        boardTemp.setNoon(board.getNoon());
+        boardTemp.setHour(board.getHour());
+        boardTemp.setMinute(board.getMinute());
+        boardTemp.setMaxpeople(board.getMaxpeople());
+        boardTemp.setGenderdisplay(board.getGenderdisplay());
+        boardTemp.setPlacename(board.getPlacename());
+        boardTemp.setPosition(board.getPosition());
+
+        boardService.write(boardTemp);
+
+        model.addAttribute("message","글 수정이 완료되었습니다.");
+        model.addAttribute("searchUrl", "/");
+
+        return "message";
+    }
+
+    @GetMapping("/api/delete/{id}")
+    public String deletePost(@PathVariable Integer id, Model model){
+
+        boardService.boardDelete(id);
+
+        return "redirect:/";
     }
 }

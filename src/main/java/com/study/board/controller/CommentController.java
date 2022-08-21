@@ -15,7 +15,7 @@ public class CommentController {
     private CommentService commentService;
 
     @PostMapping("/api/comment")
-    public String createPost(@RequestBody Comment comment, Model model) {
+    public String createComment(@RequestBody Comment comment, Model model) {
 
         commentService.write(comment);
 
