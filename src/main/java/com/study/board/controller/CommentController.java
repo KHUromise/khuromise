@@ -1,11 +1,14 @@
 package com.study.board.controller;
 
+import com.study.board.entity.Board;
 import com.study.board.entity.Comment;
 import com.study.board.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 public class CommentController {
@@ -32,5 +35,11 @@ public class CommentController {
         model.addAttribute("searchUrl", "/");
 
         return "message";
+    }
+
+    @GetMapping("/api/comment/data/{postid}")
+    @ResponseBody
+    public List<Comment> getCategoryData(@PathVariable("postid") Integer postid) {
+        return commentService.getPostidData(postid);
     }
 }
