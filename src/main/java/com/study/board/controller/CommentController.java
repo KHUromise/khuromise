@@ -24,7 +24,7 @@ public class CommentController {
     }
 
     @DeleteMapping("/api/comment/delete/{id}")
-    public String deletePost(@PathVariable("id") Integer id, @RequestBody Comment comment, Model model){
+    public String deleteComment(@PathVariable("id") Integer id, @RequestBody Comment comment, Model model){
 
         commentService.delete(id);
 
