@@ -37,8 +37,6 @@ function PostSend({ titlevalue , contentvalue, noonvalue, hourvalue, minutevalue
 
   function onSubmit(e) {
     e.preventDefault();
-    const submitForm = document.querySelector("#createpost");
-
     
     if (gender !== findUser.usergender && gender !== 'b') {
       alert("성별을 확인해 주세요.")
