@@ -12,9 +12,10 @@ const PostBox = styled.div`
   line-height : 29px;
 `;
 
-function PostSend({ titlevalue , contentvalue, noonvalue, hourvalue, minutevalue, peoplenumvalue, datevalue, purposevalue, gendervalue, positionvalue, placenamevalue }) {
+function PostSend({ titlevalue , contentvalue, noonvalue, hourvalue, minutevalue, peoplenumvalue, datevalue, purposevalue, gendervalue, latvalue, lonvalue, placenamevalue }) {
 
   const users = useFetch(`/api/users`);
+
   const findUsers = [...users]
   const findUser = findUsers.find((user)=>user.userid === sessionStorage.getItem('LoginUserInfo')) || {};
 
@@ -33,41 +34,41 @@ function PostSend({ titlevalue , contentvalue, noonvalue, hourvalue, minutevalue
     gender = 'b'
   }
   
-  console.log(gender);
-  console.log(gendervalue);
+  console.log(latvalue);
+  console.log(lonvalue);
 
   function onSubmit(e) {
     e.preventDefault();
     const submitForm = document.querySelector("#createpost");
 
     
-    if (gender !== findUser.userGender && gender !== 'b') {
+    if (gender !== findUser.usergender && gender !== 'b') {
       alert("성별을 확인해 주세요.")
     }
     else {
-      fetch("http://localhost:3002/posts", {
+      fetch("/board/writepro", {
         method : "POST",
         headers : {
           "Content-Type" : "application/json; charset=UTF-8"
         },
         body : JSON.stringify({
-          "id" : nextId,
-          "writerId" : sessionStorage.getItem('LoginUserInfo'),
+          "writerid" : sessionStorage.getItem('LoginUserInfo'),
           "userApply" : [sessionStorage.getItem('LoginUserInfo')],
-          "writerGender" : "w",
+          "writergender" : "w",
           "date" : datevalue,
           "noon" : noonvalue,
           "hour" : hourvalue,
           "minute" : minutevalue,
           "category" : purposevalue,
-          "genderDisplay" : gendervalue,
-          "genderCheck" : gender,
-          "currentPeople" : 1,
-          "maxPeople" : peoplenumvalue,
+          "genderdisplay" : gendervalue,
+          "gendercheck" : gender,
+          "currentpeople" : 1,
+          "maxpeople" : Number(peoplenumvalue),
           "title" : titlevalue,
           "content" : contentvalue,
-          "position" : positionvalue,
-          "placeName" : placenamevalue
+          "lat" : latvalue,
+          "lon" : lonvalue,
+          "placename" : placenamevalue
         }),
       })
           .then(res => res.json())

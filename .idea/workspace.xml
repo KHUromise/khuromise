@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dfcc8c3-9a55-4b81-8397-78138e7da488" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/study/board/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/study/board/controller/BoardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/study/board/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/study/board/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/components/LoginRegister/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/components/LoginRegister/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/components/Post/PostMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/components/Post/PostMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/components/createpost/CreatePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/components/createpost/CreatePost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/components/createpost/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/components/createpost/Map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/components/createpost/Place.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/components/createpost/Place.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/components/createpost/PostSend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/components/createpost/PostSend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/entity/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/entity/Board.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +109,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1660799292299</updated>
-      <workItem from="1661072677389" duration="3614000" />
+      <workItem from="1661072677389" duration="3917000" />
     </task>
     <servers />
   </component>
