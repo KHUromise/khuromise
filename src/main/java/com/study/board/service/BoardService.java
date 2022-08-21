@@ -55,5 +55,10 @@ public class BoardService {
     public List<Board> getCategoryData(String category){
         return boardRepository.findByCategoryContaining(category);
     }
+
+    @Transactional
+    public List<Board> getWriteridData(String writerid){
+        return boardRepository.findByWriteridContaining(writerid);
+    }
 }
 

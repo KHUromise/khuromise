@@ -68,6 +68,12 @@ public class BoardController {
         return boardService.getCategoryData(category);
     }
 
+    @GetMapping("/api/posts/{writerid}")
+    @ResponseBody
+    public List<Board> getWriteridData(@PathVariable String writerid) {
+        return boardService.getWriteridData(writerid);
+    }
+
     @GetMapping("/api/posts/id/{id}")
     @ResponseBody
     public Board getIdData(@PathVariable("id") Integer id) {

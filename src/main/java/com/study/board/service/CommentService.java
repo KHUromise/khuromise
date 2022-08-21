@@ -34,4 +34,9 @@ public class CommentService {
         return commentRepository.findByPostidContaining(postid);
     }
 
+    @Transactional
+    public List<Comment> getWriteridData(String writerid){
+        return commentRepository.findByWriteridContaining(writerid);
+    }
+
 }

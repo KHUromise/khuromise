@@ -15,4 +15,6 @@ public interface BoardRepository extends JpaRepository<Board, Integer> {
     List<Board> findAllByOrderById();
 
     List<Board> findByCategoryContaining(String category);
+
+    List<Board> findByWriteridContaining(String writerid);
 }

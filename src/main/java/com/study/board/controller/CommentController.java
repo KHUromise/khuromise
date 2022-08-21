@@ -48,4 +48,10 @@ public class CommentController {
     public Comment getIdData(@PathVariable("id") Integer id) {
         return commentService.view(id);
     }
+
+    @GetMapping("/api/comment/writerid/{writerid}")
+    @ResponseBody
+    public List<Comment> getWriteridData(@PathVariable String writerid) {
+        return commentService.getWriteridData(writerid);
+    }
 }
