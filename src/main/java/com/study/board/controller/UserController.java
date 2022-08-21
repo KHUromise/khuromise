@@ -57,7 +57,7 @@ public class UserController {
         user.usergender = jobject.getString("usergender");
         user.useremail = jobject.getString("useremail");
 
-       userService.write(user);
+        userService.write(user);
 
         model.addAttribute("message","글 작성이 완료되었습니다.");
         model.addAttribute("searchUrl", "/board/list");
