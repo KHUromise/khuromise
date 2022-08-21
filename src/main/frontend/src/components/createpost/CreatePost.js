@@ -154,6 +154,7 @@ function CreatePost(props) {
   console.log(peoplenumvalue);
   console.log(exactMonth(todayMonth));
   */
+ 
   console.log(placenamevalue);
   return (
     <CreatePostBox>
