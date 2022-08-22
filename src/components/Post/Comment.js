@@ -5,7 +5,7 @@ import useFetch from "../../hooks/useFetch";
 import CommentItem from "./CommentItem";
 
 const CommentBlock = styled.div`
-  width: 600px;
+  width: 100%;
   height: auto;
   margin: 20px auto;
   box-shadow: 0 0 8px 0 #bcbcbc;
@@ -19,7 +19,7 @@ const CommentBlock = styled.div`
 `;
 
 const WriteForm = styled.form`
-  width: 550px;
+  width: 95%;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -53,7 +53,7 @@ const WriteForm = styled.form`
 `;
 
 const CommentBox = styled.div`
-  width: 500px;
+  width: 95%;
   height: auto;
   margin: 20px auto;
 

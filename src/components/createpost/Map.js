@@ -4,21 +4,15 @@ const { kakao } = window;
 
 const PlaceListBox = styled.div`
   border : 1px solid #bcbcbc;
-  width : 290px;
-  height: 150px;
+  width : 30%;
+  margin-left : 1px;
   overflow : scroll;
-  display : flex;
-  border-radius: 6px;
-  margin-Top: 40px;
-  margin-left: 10px;
 `;
 
 const SelectedPlaceBox = styled.div`
-  border-bottom : 1px solid #bcbcbc;
+  border : 1px solid #bcbcbc;
   cursor : pointer;
   padding : 4px;
-  
-  
 `;
 
 function Map({ searchPlace, setPositionValue, setPlacenameValue }) {
@@ -85,20 +79,18 @@ function Map({ searchPlace, setPositionValue, setPlacenameValue }) {
   function ShowList({data}) {
     return (
       <div onClick={() => onClick(data)}>
-        <div style={{color : 'green'}}>{data.place_name}</div>
+        <div style={{color : 'blue'}}>{data.place_name}</div>
         <div>{data.address_name}</div>
       </div>
     );
   }
 
   return(
-    <div style={{display: 'flex'}}>
+    <>
       <div id='Map'
         style={{
           border : '1px solid #bcbcbc',
-          borderRadius: '16px',
-          width : '400px',
-          height: '190px',
+          width : '70%',
           marginRight : '1px'
         }} 
       ></div>
@@ -108,7 +100,7 @@ function Map({ searchPlace, setPositionValue, setPlacenameValue }) {
             <ShowList data={data} key={data.id}/>
           </SelectedPlaceBox>)}
       </PlaceListBox>
-    </div>
+    </>
   );
 }
 

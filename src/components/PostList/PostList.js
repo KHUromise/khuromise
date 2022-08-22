@@ -5,9 +5,8 @@ import useFetch from "../../hooks/useFetch";
 import EmptyPage from "../EmptyPage";
 
 const PostListBlock = styled.div`
-  width: 750px;
+  width: 100%;
   height: auto;
-  min-height: 400px;
   margin: 20px auto;
   box-shadow: 0 0 8px 0 #bcbcbc;
   border-radius: 20px;
@@ -21,7 +20,7 @@ const PostListBlock = styled.div`
 
 const PostListHead = styled.div`
   width: 95%;
-  height: 45px;
+  height: 50px;
   border-bottom: 1px solid #bcbcbc;
   margin: 10px auto;
   padding-top: 5px;
@@ -29,7 +28,7 @@ const PostListHead = styled.div`
   h1 {
     margin: 0;
     padding-left: 10px;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
     line-height: 50px;
   }

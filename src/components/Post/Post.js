@@ -11,11 +11,13 @@ import Comment from "./Comment";
 import PostMap from "./PostMap";
 
 const PostBlock = styled.div`
-  width: 600px;
+  width: 100%;
   height: auto;
   margin: 20px auto;
   box-shadow: 0 0 8px 0 #bcbcbc;
   border-radius: 20px;
+  max-width: 800px;
+  min-width: 520px;
 `;
 
 const PostHeader = styled.div`
@@ -35,7 +37,7 @@ const UpperBox = styled.div`
   justify-content: space-between;
 
   h1 {
-    font-size: 27px;
+    font-size: 30px;
     line-height: 40px;
     margin-left: 40px;
   }
@@ -43,13 +45,12 @@ const UpperBox = styled.div`
   button {
     width: 70px;
     height: 40px;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     line-height: 30px;
     margin-right: 40px;
     border: 1px solid #bcbcbc;
     border-radius: 5px;
-    background-color: white;
   }
 `;
 
@@ -63,9 +64,9 @@ const UnderBox = styled.div`
   align-items: center;
 
   .item {
-    width: 130px;
+    width: 300px;
     height: 100%;
-    font-size: 14px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,8 +75,8 @@ const UnderBox = styled.div`
 `;
 
 const Img = styled.img`
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   margin-bottom: 5px;
 `;
 
@@ -85,8 +86,8 @@ const PostBody = styled.div`
   margin: 20px auto;
 
   .map {
-    height: 300px;
-    width : 300px;
+    height: 400px;
+    width : 400px;
     border: 1px solid #bcbcbc;
     margin: 0 auto;
     margin-bottom: 10px;

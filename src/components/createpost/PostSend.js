@@ -5,7 +5,10 @@ import { NextPostIdContext } from '../../context/Context';
 import useFetch from '../../hooks/useFetch';
 
 const PostBox = styled.div`
+  width : 90%;
+  height : 100%;
   display : flex;
+  justify-content : center;
   line-height : 29px;
 `;
 
@@ -75,27 +78,22 @@ function PostSend({ titlevalue , contentvalue, noonvalue, hourvalue, minutevalue
   }
   
   return(
-    <>
+    <PostBox>
       <form style = {{
-          width : '100px',
+          width : '100%',
           display : 'flex',
-          }} 
+          justifyContent : 'center'}} 
         onSubmit = {onSubmit}
       >
         <button style={{
-          width : '100px',
-          lineHeight : '20px',
-          backgroundColor: 'white',
-          border: 'none',
-          borderRadius: '16px',
-          cursor : 'pointer',
-          boxShadow: '0 0 5px 0 #bcbcbc',
+          width : '80%',
+          lineHeight : '20px'
         }}
         >
-          약속 등록
+          등록
         </button>
       </form>
-    </>
+    </PostBox>
   );
 }
 export default PostSend;

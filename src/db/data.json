@@ -127,6 +127,30 @@
       "placeName": "경희대학교 국제캠퍼스"
     },
     {
+      "id": 6,
+      "writerId": "id1",
+      "userApply": [
+        "id1"
+      ],
+      "writerGender": "w",
+      "date": "2022-08-25",
+      "noon": "오전",
+      "hour": "1",
+      "minute": "00",
+      "category": "게임",
+      "genderDisplay": "성별무관",
+      "genderCheck": "b",
+      "currentPeople": 1,
+      "maxPeople": "5",
+      "title": "ㅇ",
+      "content": "ㅇ",
+      "position": [
+        "37.2479707082863",
+        "127.078163434991"
+      ],
+      "placeName": "아이센스리그PC방 수원경희대점"
+    },
+    {
       "id": 7,
       "writerId": "id1",
       "userApply": [
@@ -201,13 +225,6 @@
       "writerId": "asdfasdf",
       "writerName": "asdfasdf1",
       "comment": "반갑습니다"
-    },
-    {
-      "id": 4,
-      "postId": "5",
-      "writerId": "id1",
-      "writerName": "name1",
-      "comment": "ㅎㅇㅎㅇ"
     }
   ]
 }

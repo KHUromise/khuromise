@@ -17,7 +17,7 @@ import Mypostlist from "./components/Mypage/Mypostlist";
 import Mypage from "./components/Mypage/Mypage";
 import Mypromise from "./components/Mypage/Mypromise";
 import Myreply from "./components/Mypage/Myreply";
-import Main from "./Main";
+
 const GlobalStyle = createGlobalStyle`
   :root {
     --main-color: #bcbcbc;
@@ -58,7 +58,8 @@ function App() {
       <ContextProvider>
         <BrowserRouter>
           <GlobalStyle />
-          <Main isLogin={isLogin} setIsLogin={setIsLogin}/>
+          <Header isLogin={isLogin} setIsLogin={setIsLogin} />
+          <TestBar isLogin={isLogin} />
           <Routes>
             <Route
               path="/"
@@ -91,6 +92,7 @@ function App() {
             <Route path="/mypage/mypromise" element={<Mypromise/>}></Route>
             <Route path="/mypage/myreply" element={<Myreply />}></Route>
           </Routes>
+          <Footer isLogin={isLogin} />
         </BrowserRouter>
       </ContextProvider>
     </PostContextProvider>

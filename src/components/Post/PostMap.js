@@ -29,7 +29,7 @@ function PostMap() {
   return( 
     <div id='Map'
       style={{
-        height: '230px',
+        height: '400px',
         width : '400px',
         border: '1px solid #bcbcbc',
         margin: '0 auto',

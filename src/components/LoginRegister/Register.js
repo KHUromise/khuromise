@@ -6,13 +6,8 @@ import { useNavigate } from "react-router";
 import icon from "./../Header/icon.png";
 import config from "./config.js";
 
-const Re = styled.div`
-  width : 600px;
-  height : 400px;
-  margin : auto;
-`
 const RegisterTemplate = styled.div`
-  width: 400px;
+  width: 380px;
   height: auto;
   margin: 50px auto;
   padding: 40px;
@@ -34,7 +29,7 @@ const RegisterTemplate = styled.div`
   }
 
   input {
-    width: 180px;
+    width: 160px;
     height: 26px;
     margin: 0px;
     border: 1px solid #bcbcbc;
@@ -57,7 +52,7 @@ const RegisterTemplate = styled.div`
   }
 
   .genderButton {
-    width: 92px;
+    width: 83px;
     height: 30px;
     font-size: 14px;
     border: 1px solid #bcbcbc;
@@ -106,20 +101,10 @@ const RegisterTemplate = styled.div`
   }
 `;
 
-const Logobox = styled.div`
-  width : 400px;
-  height: 150px;
-  margin : 50px auto;
-  border-radius: 16px;
-  box-shadow: 0 0 8px 0 #bcbcbc;
-  background-color: rgb(193, 225, 164);
-`
-
 const Logo = styled.img`
   width: 200px;
   height: 90px;
-  margin: 22px 90px;
-  cursor: pointer;
+  margin-bottom: 40px;
 `;
 
 const Register = () => {
@@ -385,228 +370,224 @@ const Register = () => {
   };
 
   return (
-    <Re>
-      <Logobox>
-        <Logo type="button" src={icon} onClick={()=>{navigate('/');}}/>
-      </Logobox>
-      <RegisterTemplate>
-        <table>
-          <tbody>
-            <tr>
-              <td className="head">아이디</td>
-              <td>
-                <input
-                  ref={idRef}
-                  onChange={idChange}
-                  placeholder="아이디를 입력해주세요"
-                />
-              </td>
-              <td>
-                <button onClick={idCheckClick}>중복확인</button>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                {idShort && (
-                  <span className="redText">
-                    아이디는 6글자 이상이어야합니다.
-                  </span>
-                )}
-                {canId !== null &&
-                  (canId ? (
-                    <span className="greenText">사용가능한 아이디입니다.</span>
-                  ) : (
-                    <span className="redText">이미 사용중인 아이디입니다.</span>
-                  ))}
-              </td>
-            </tr>
-            <tr>
-              <td className="head">비밀번호</td>
-              <td>
-                <input
-                  className="pw"
-                  ref={pwRef}
-                  onChange={pwChange}
-                  placeholder="비밀번호를 입력해주세요"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                {pw &&
-                  (pw.length < 8 ? (
-                    <span className="redText">비밀번호가 너무 짧습니다.</span>
-                  ) : null)}
-              </td>
-            </tr>
-            <tr>
-              <td className="head">비밀번호 확인</td>
-              <td>
-                <input
-                  className="pw"
-                  ref={_pwRef}
-                  onChange={_pwChange}
-                  placeholder="비밀번호를 다시 입력해주세요"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                {pw &&
-                  _pw &&
-                  (pw === _pw ? (
-                    <span className="greenText">비밀번호가 일치합니다.</span>
-                  ) : (
-                    <span className="redText">비밀번호가 일치하지 않습니다.</span>
-                  ))}
-              </td>
-            </tr>
-            <tr>
-              <td className="head">이름</td>
-              <td>
-                <input
-                  ref={nameRef}
-                  onChange={nameChange}
-                  placeholder="이름을 입력해주세요"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td className="head">성별</td>
-              <td>
-                <button
-                  className="genderButton"
-                  onClick={maleClick}
-                  style={{
-                    backgroundColor: gender === "m" ? "#eaeaea" : "white",
-                  }}
-                >
-                  남자
-                </button>
-                <button
-                  className="genderButton"
-                  onClick={femaleClick}
-                  style={{
-                    backgroundColor: gender === "w" ? "#eaeaea" : "white",
-                  }}
-                >
-                  여자
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td className="head">생년월일</td>
-              <td>
-                <select ref={yearRef} onChange={yearChange} value={year}>
-                  {yearList.map((year) => (
-                    <option key={year}>{year}</option>
-                  ))}
-                </select>
-                년
-                <select ref={monthRef} onChange={monthChange} value={month}>
-                  {monthList.map((month) => (
-                    <option key={month}>{month}</option>
-                  ))}
-                </select>
-                월
-                <select ref={dayRef} onChange={dayChange} value={day}>
-                  {selectDayList.map((day) => (
-                    <option key={day}>{day}</option>
-                  ))}
-                </select>
-                일
-              </td>
-            </tr>
-            <tr>
-              <td className="head">e-mail</td>
-              <td>
-                {isCerti ? (
-                  <div>
-                    <input
-                      className="emailInput"
-                      ref={emailRef}
-                      onChange={emailChange}
-                      placeholder={emailRef.current.value}
-                      disabled
-                    />
-                    <span>@khu.ac.kr</span>
-                  </div>
+    <RegisterTemplate>
+      <Logo src={icon} />
+      <table>
+        <tbody>
+          <tr>
+            <td className="head">아이디</td>
+            <td>
+              <input
+                ref={idRef}
+                onChange={idChange}
+                placeholder="아이디를 입력해주세요"
+              />
+            </td>
+            <td>
+              <button onClick={idCheckClick}>중복확인</button>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              {idShort && (
+                <span className="redText">
+                  아이디는 6글자 이상이어야합니다.
+                </span>
+              )}
+              {canId !== null &&
+                (canId ? (
+                  <span className="greenText">사용가능한 아이디입니다.</span>
                 ) : (
-                  <div>
-                    <input
-                      className="emailInput"
-                      ref={emailRef}
-                      onChange={emailChange}
-                      placeholder="e-mail"
-                    />
-                    <span>@khu.ac.kr</span>
-                  </div>
-                )}
-              </td>
-              <td>
-                {canEmail ? (
-                  isCerti || <button onClick={sendEmail}>전송하기</button>
+                  <span className="redText">이미 사용중인 아이디입니다.</span>
+                ))}
+            </td>
+          </tr>
+          <tr>
+            <td className="head">비밀번호</td>
+            <td>
+              <input
+                className="pw"
+                ref={pwRef}
+                onChange={pwChange}
+                placeholder="비밀번호를 입력해주세요"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              {pw &&
+                (pw.length < 8 ? (
+                  <span className="redText">비밀번호가 너무 짧습니다.</span>
+                ) : null)}
+            </td>
+          </tr>
+          <tr>
+            <td className="head">비밀번호 확인</td>
+            <td>
+              <input
+                className="pw"
+                ref={_pwRef}
+                onChange={_pwChange}
+                placeholder="비밀번호를 다시 입력해주세요"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              {pw &&
+                _pw &&
+                (pw === _pw ? (
+                  <span className="greenText">비밀번호가 일치합니다.</span>
                 ) : (
-                  <button onClick={checkEmail}>중복확인</button>
-                )}
-              </td>
-            </tr>
-
-            {isCerti ? (
-              <tr>
-                <td className="counter">
-                  {min}:{sec}
-                </td>
-                <td>
+                  <span className="redText">비밀번호가 일치하지 않습니다.</span>
+                ))}
+            </td>
+          </tr>
+          <tr>
+            <td className="head">이름</td>
+            <td>
+              <input
+                ref={nameRef}
+                onChange={nameChange}
+                placeholder="이름을 입력해주세요"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td className="head">성별</td>
+            <td>
+              <button
+                className="genderButton"
+                onClick={maleClick}
+                style={{
+                  backgroundColor: gender === "m" ? "#eaeaea" : "white",
+                }}
+              >
+                남자
+              </button>
+              <button
+                className="genderButton"
+                onClick={femaleClick}
+                style={{
+                  backgroundColor: gender === "w" ? "#eaeaea" : "white",
+                }}
+              >
+                여자
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td className="head">생년월일</td>
+            <td>
+              <select ref={yearRef} onChange={yearChange} value={year}>
+                {yearList.map((year) => (
+                  <option key={year}>{year}</option>
+                ))}
+              </select>
+              년
+              <select ref={monthRef} onChange={monthChange} value={month}>
+                {monthList.map((month) => (
+                  <option key={month}>{month}</option>
+                ))}
+              </select>
+              월
+              <select ref={dayRef} onChange={dayChange} value={day}>
+                {selectDayList.map((day) => (
+                  <option key={day}>{day}</option>
+                ))}
+              </select>
+              일
+            </td>
+          </tr>
+          <tr>
+            <td className="head">e-mail</td>
+            <td>
+              {isCerti ? (
+                <div>
                   <input
-                    maxLength="6"
-                    placeholder="인증번호를 입력해주세요"
-                    onKeyDown={isNum}
-                    ref={checkRef}
-                    onChange={checkChange}
+                    className="emailInput"
+                    ref={emailRef}
+                    onChange={emailChange}
+                    placeholder={emailRef.current.value}
+                    disabled
                   />
-                </td>
-                <td>
-                  <button onClick={checkNum}>인증하기</button>
-                </td>
-              </tr>
-            ) : (
-              canEmail !== null &&
-              (canEmail ? (
-                <tr>
-                  <td></td>
-                  <td className="greenText">사용가능한 이메일입니다.</td>
-                </tr>
+                  <span>@khu.ac.kr</span>
+                </div>
               ) : (
-                <tr>
-                  <td></td>
-                  <td className="redText">이미 사용중인 이메일입니다.</td>
-                </tr>
-              ))
-            )}
-            {certification ? (
+                <div>
+                  <input
+                    className="emailInput"
+                    ref={emailRef}
+                    onChange={emailChange}
+                    placeholder="e-mail"
+                  />
+                  <span>@khu.ac.kr</span>
+                </div>
+              )}
+            </td>
+            <td>
+              {canEmail ? (
+                isCerti || <button onClick={sendEmail}>전송하기</button>
+              ) : (
+                <button onClick={checkEmail}>중복확인</button>
+              )}
+            </td>
+          </tr>
+
+          {isCerti ? (
+            <tr>
+              <td className="counter">
+                {min}:{sec}
+              </td>
+              <td>
+                <input
+                  maxLength="6"
+                  placeholder="인증번호를 입력해주세요"
+                  onKeyDown={isNum}
+                  ref={checkRef}
+                  onChange={checkChange}
+                />
+              </td>
+              <td>
+                <button onClick={checkNum}>인증하기</button>
+              </td>
+            </tr>
+          ) : (
+            canEmail !== null &&
+            (canEmail ? (
               <tr>
                 <td></td>
-                <td className="greenText">인증이 완료되었습니다.</td>
+                <td className="greenText">사용가능한 이메일입니다.</td>
               </tr>
             ) : (
-              certification === false && (
-                <tr>
-                  <td></td>
-                  <td className="redText">인증번호가 일치하지 않습니다.</td>
-                </tr>
-              )
-            )}
-          </tbody>
-        </table>
-        <button className="registerButton" onClick={clickRegister}>
-          회원가입
-        </button>
-      </RegisterTemplate>
-    </Re>
+              <tr>
+                <td></td>
+                <td className="redText">이미 사용중인 이메일입니다.</td>
+              </tr>
+            ))
+          )}
+          {certification ? (
+            <tr>
+              <td></td>
+              <td className="greenText">인증이 완료되었습니다.</td>
+            </tr>
+          ) : (
+            certification === false && (
+              <tr>
+                <td></td>
+                <td className="redText">인증번호가 일치하지 않습니다.</td>
+              </tr>
+            )
+          )}
+        </tbody>
+      </table>
+      <button className="registerButton" onClick={clickRegister}>
+        회원가입
+      </button>
+    </RegisterTemplate>
   );
 };
 

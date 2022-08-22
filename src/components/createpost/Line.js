@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 
 const Linetype = styled.div`
-  width : 600px;
+  width : 90%;
   height : 1px;
   background : gray;
   margin : auto;

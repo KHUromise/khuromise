@@ -1,4 +1,22 @@
 import React, {useState} from 'react';
+import styled from "styled-components";
+
+const GenderBox = styled.div`
+  width: 18%;
+  height : 30px;
+  margin : auto;
+  display : inline-block;
+  border: 1px solid #bcbcbc;
+  position : relative;
+  font-size: 15px;
+  text-align : center;
+  line-height : 30px;
+`;
+
+const GenderBarBox = styled.div`
+  display : flex;
+  justify-content : center; 
+`;
 
 
 function GenderList(props) {
@@ -41,9 +59,7 @@ function GenderList(props) {
       <b
         style = {{
           cursor:'pointer',
-          margin: '3px',
-          color: gender.active ? 'black' : '#696969',
-          fontWeight: gender.active ? 'bold':''
+          color: gender.active ? 'red' : 'black'
         }}
         onClick = {()=> onToggle(gender.id)}
       >
@@ -53,13 +69,13 @@ function GenderList(props) {
   }
 
   return (
-    <div>
+    <GenderBarBox>
       {currentgender.map(gender => (
-        <div key={gender.id} style={{display:'inline-block', margin:'6px'}}>
+        <GenderBox key={gender.id}>
           <Gender gender={gender} key={gender.id} onToggle={onToggle}/>
-        </div>
+        </GenderBox>
       ))}
-    </div>
+    </GenderBarBox>
   );
 }
 

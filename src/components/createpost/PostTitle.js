@@ -2,19 +2,20 @@ import React, {useRef} from 'react';
 import styled from 'styled-components';
 
 const TitleBox = styled.div`
+  width : 10%;
   height : 25px;
+  border : 1px solid #bcbcbc;
   display : inline-block;
   text-align : center;
-  font-size: 13px;
-  padding: 6px;
+  line-height : 25px;
 `;
 
 const TitleWritingBox = styled.div`
-  width : 300px;
+  width : 80%;
   height : 25px;
-  border-bottom : 1px solid #bcbcbc;
+  border : 1px solid #bcbcbc;
   display : inline-block;
-  padding: 1px;
+  
 `;
 
 const TotalTitleBox = styled.div`
@@ -37,14 +38,15 @@ function PostTitle(props) {
     <div>
       <TotalTitleBox>
         <TitleBox>
-          제목 :
+          제목
         </TitleBox>
         <TitleWritingBox>
           <input style={{
             width : '80%',
-            height : '20px',
+            height : '18px',
             border : '0px solid #bcbcbc',
             position : 'relative',
+            top : '8%'
             }}
             ref={titleRef}
             onChange={onChange}
