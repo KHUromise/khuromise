@@ -3,11 +3,12 @@ import icon from "./../Header/icon.png";
 import { useState } from "react";
 import fetchLogin from "./fetchLogin";
 import { useNavigate, Link } from "react-router-dom";
+import './Login.css';
 
 const LoginTemplate = styled.div`
   width: 300px;
   height: 300px;
-  margin: 190px auto;
+  margin: 100px auto;
   box-shadow: 0 0 8px 0 #bcbcbc;
   border-radius: 16px;
 
@@ -115,40 +116,38 @@ const Login = () => {
   };
 
   return (
-    <LoginTemplate>
-      <Logo src={icon} />
-      <LoginBox>
-        <div className="input_box">
-          <input
+    <>
+      
+      <div className="logintotalbox">
+        <div className="login">LOGIN</div>
+        <div className="loginboxleft">
+          <img src={icon} alt="" width="120px" style={{marginTop : "20px", marginLeft: "30px"}}></img>
+          <div className="logintextbox">로그인 후 <br/>다양한 기능을 <br/>이용해 보세요</div>
+        </div>
+        <div className="loginboxright">
+          <div className="loginibox">
+            <input className="logininput" 
             name="inputId"
             type="text"
             placeholder="ID"
             value={inputId}
             onChange={onChange}
-          ></input>
-          <input
+            ></input>
+            <input className="logininput" 
             name="inputPw"
             type="password"
-            placeholder="Password"
+            placeholder="PW"
             value={inputPw}
-            onChange={onChange}
-          ></input>
+            onChange={onChange}></input>
+          </div>
+          <button className="loginbutton" onClick={onClick}>login</button>
+          <button className="idpwb">아이디/비밀번호 찾기</button>
+          <Link to ="/register">
+            <button className="regb">회원가입</button>
+          </Link>
         </div>
-        <button
-          className="login_btn"
-          style={{ cursor: "pointer" }}
-          onClick={onClick}
-        >
-          로그인
-        </button>
-      </LoginBox>
-      <BottomBox>
-        <button>아이디/비밀번호 찾기</button>
-        <Link to="/register">
-          <button style={{ cursor: "pointer" }}>회원가입</button>
-        </Link>
-      </BottomBox>
-    </LoginTemplate>
+      </div>
+    </>
   );
 };
 

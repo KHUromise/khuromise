@@ -39,8 +39,8 @@ const RightBox = styled.div`
 
 const Title = styled.div`
   width: 100%;
-  height: 25px;
-  font-size: 20px;
+  height: 20px;
+  font-size: 19px;
   font-weight: bold;
   border: none;
   background-color: white;
@@ -73,7 +73,7 @@ const Participant = styled.div`
 `;
 
 const GenderBox = styled.div`
-  width: 10%;
+  width: 15%;
   height: 70px;
   font-size: 15px;
 
