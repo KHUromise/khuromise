@@ -1,0 +1,46 @@
+.Main {
+    width: 800px;
+    height: 220px;
+    margin: 0 auto;
+}
+.Main-img {
+    position: relative;
+    width: 800px;
+    height: 220px;
+    background-size: 100% 150%;
+    opacity: 0.8;
+    display: block;
+    margin: 0px auto;
+    background-image: url(https://lh3.googleusercontent.com/p/AF1QipMTdFaPjhfX9X5hjdfMneGKpTHZu1f2yguGMrHF=w1080-h608-p-no-v0);
+}
+.Mainbar {
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.3);
+    width: 800px;
+    height: 30px;
+    margin: 20px auto;
+    justify-content: center;
+}
+.Mainbar .button{
+    margin-left: 105px;
+    margin-top: 5px;
+    width: 15%;
+    height: 30px;
+    font-size: small;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.khutext {
+    position: absolute;
+    top:60%;
+    left: 85%;
+    transform: translate(-60%, -15%);                                                                   
+    font-size : 13px;
+    color: rgb(154, 189, 125);
+    opacity: 0.9;
+    z-index: 2;
+    text-align: right;
+    cursor: pointer;
+}

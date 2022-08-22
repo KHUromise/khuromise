@@ -3,37 +3,42 @@ import styled from "styled-components";
 import Map from './Map';
 
 const PlaceBox = styled.div`
-  width : 95%;
-  height : 450px;
+  width : 720px;
+  height : 200px;
   display : flex;
   flex-direction : column;
-  justify-content : center;
-  align-items : center;
 `;
 
 const SearchBox = styled.div`
-  width : 90%;
-  height : 8%;
+  width : 300px;
+  height : 50px;
   display : flex;
-  margin : 2px;
+  margin-bottom : 7px;
+  position: absolute;
+  Left : 55%;
 
   input {
-    border : 1px solid #bcbcbc;
-    width : 90%;
+    width : 230px;
     height : 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 5px 0 #bcbcbc;
+    border:none;
   }
 
   button {
-    border : 1px solid #bcbcbc;
-    width : 10%;
+    box-shadow: 0 0 5px 0 #bcbcbc;
+    border:none;
+    width : 50px;
     height : 34px;
+    border-radius: 16px;
+    background-color: white;
+    margin-left: 10px;
   }
 `;
 
 const MapBox = styled.div`
-  width : 90%;
-  height : 400px;
-  display : flex;
+  width : 700px;
+  height : 200px;
 `;
 
 

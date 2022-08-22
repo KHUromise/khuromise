@@ -2,7 +2,7 @@ import styled from "styled-components";
 import useFetch from "../../hooks/useFetch";
 
 const CommentItemBox = styled.div`
-  width: 97%;
+  width: 530px;
   height: auto;
   padding: 10px;
   margin-bottom: 10px;
@@ -19,7 +19,7 @@ const CommentItemBox = styled.div`
   }
 
   .comment {
-    width: 90%;
+    width: 450px;
     height: auto;
     margin: 10px 0;
   }
@@ -31,6 +31,7 @@ const CommentItemBox = styled.div`
     border: none;
     background-color: transparent;
     color: #ababab;
+    cursor: pointer;
   }
 `;
 

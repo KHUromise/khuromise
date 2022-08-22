@@ -3,10 +3,12 @@ import styled from 'styled-components';
 
 const PostBox = styled.div`
   width : 100%;
-  height : 100%;
   display : flex;
   justify-content : center;
-`;
+  border : none;
+  boxShadow:' 0 0 10px 0 #bcbcbc;
+  borderRadius: 16px;
+`
 
 function PostContents(props) {
 
@@ -16,7 +18,7 @@ function PostContents(props) {
     props.setContentsValue(contentsRef.current.value);
   };
 
-  const [hei, setHei] = useState("375");
+  const [hei, setHei] = useState("100");
 
   function size(e) {
     e.target.style.height = "1px";
@@ -28,11 +30,12 @@ function PostContents(props) {
     <PostBox>
       <textarea
         style = {{
-          border : '1px solid #bcbcbc',
-          width : '90%',
+          border: '1px solid #bcbcbc',
+          borderRadius:'8px',
+          width : '98%',
           resize : 'none',
           height : hei+'px',
-          minHeight : '350px'
+          minHeight : '150px'
         }}
         onChange={onChange}
         onKeyDown = {size}

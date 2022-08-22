@@ -1,21 +1,15 @@
 import React, {useRef} from 'react';
 import styled from 'styled-components';
-
-const TimeBox = styled.div`
-  display : flex;
-  justify-content : center;
-`;
+import './CP.css';
 
 const DateInputBox = styled.div`
-  width : 50%;
-  height : 100%;
+  width : 100px;
   display : flex;
   justify-content : center;
 `;
 
 const TimeInputBox = styled.div`
-  display : flex;
-  justify-content : center;
+  margin: 0;
 `;
 
 function Time(props) {
@@ -42,27 +36,32 @@ function Time(props) {
   };
 
   return (
-    <TimeBox>
-      <DateInputBox>
+    <div style={{display: 'inline-block', padding: '2px', marginLeft:'10px'}}>
+        
+      <div style={{width:'170px'}}>
         <input
           ref={dateRef}
           onChange={onChange4}
           type='date'
           style={{
-            width : '90%',
-            height : '20px',
+            width : '100%',
+            height : '25px',
             fontSize : '15px',
-            borderStyle : 'double',
-            padding : '3px'}}/>
-      </DateInputBox>
-      <TimeInputBox>
-        <select ref={noonRef} onChange={onChange1}>
+            border : '1px solid #bcbcbc',
+            borderRadius: '10px'}}/>
+      </div>
+      <div >
+        <select ref={noonRef} onChange={onChange1} style={{width : '60px', height:'25px',
+            margin: '2px',
+            border : '1px solid #bcbcbc',
+            borderRadius: '10px'}}>
           <option>오전</option>
           <option>오후</option>
         </select>
-      </TimeInputBox>
-      <TimeInputBox>
-        <select ref={hourRef} onChange={onChange2}>
+        <select ref={hourRef} onChange={onChange2} style={{width : '50px', height:'25px',
+            margin: '2px',
+            border : '1px solid #bcbcbc',
+            borderRadius: '10px'}}>
           <option>01</option>
           <option>02</option>
           <option>03</option>
@@ -76,24 +75,19 @@ function Time(props) {
           <option>11</option>
           <option>12</option>
         </select>
-      </TimeInputBox>
-      <TimeInputBox>
-        <select ref={minuteRef} onChange={onChange3}>
+        <select ref={minuteRef} onChange={onChange3} style={{width : '50px', height:'25px',
+            margin: '2px',
+            border : '1px solid #bcbcbc',
+            borderRadius: '10px'}}>
           <option>00</option>
-          <option>05</option>
           <option>10</option>
-          <option>15</option>
           <option>20</option>
-          <option>25</option>
           <option>30</option>
-          <option>35</option>
           <option>40</option>
-          <option>45</option>
           <option>50</option>
-          <option>55</option>
         </select>
-      </TimeInputBox>
-    </TimeBox>
+      </div>
+    </div>
   );
 }
 

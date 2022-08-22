@@ -1,22 +1,6 @@
 import React, {useState} from 'react';
-import styled from "styled-components";
 
-const PurposeBox = styled.div`
-  width: 18%;
-  height : 30px;
-  margin : auto;
-  display : inline-block;
-  border: 1px solid #bcbcbc;
-  position : relative;
-  font-size: 15px;
-  text-align : center;
-  line-height : 30px;
-`;
 
-const PurposeBarBox = styled.div`
-  display : flex;
-  justify-content : center; 
-`;
 
 
 function PurposeList(props) {
@@ -68,7 +52,8 @@ function PurposeList(props) {
       <b
         style = {{
           cursor:'pointer',
-          color: purpose.active ? 'red' : 'black'
+          margin: '8px',
+          color: purpose.active ? 'black' : '#696969',
         }}
         onClick = {()=> onToggle(purpose.id)}
       >
@@ -78,13 +63,14 @@ function PurposeList(props) {
   }
 
   return (
-    <PurposeBarBox>
+    <div>
+
       {purposes.map(purpose => (
-        <PurposeBox key={purpose.id}>
+        <div style={{display: 'inline-block', marginTop:'7px'}} key={purpose.id}>
           <Purpose purpose={purpose} key={purpose.id} onToggle={onToggle}/>
-        </PurposeBox>
+        </div>
       ))}
-    </PurposeBarBox>
+    </div>
   );
 }
 

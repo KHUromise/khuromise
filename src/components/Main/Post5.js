@@ -1,47 +1,10 @@
-import React , {Component, useState, useEffect} from 'react';
-import styled from 'styled-components';
+import React , {useState, useEffect} from 'react';
+import './Post5.css';
 import useFetch from '../../hooks/useFetch';
-import { useParams, BrowserRouter as Router, Switch, Route, Link, useNavigate } from "react-router-dom";
-import { ReactDOM } from 'react';
-import { render } from '@testing-library/react';
-import PostList from '../PostList/PostList';
 import PostListItem from '../PostList/PostListItem';
+import { useNavigate } from "react-router";
 
-const TotalBox = styled.div`
-  display : flex;
-  flex-direction : column;
-`;
 
-const PurposeBox = styled.div`
-  width: 20%;
-  height : 30px;
-  display : inline-block;
-  border-bottom: 1px solid #bcbcbc;
-  position : relative;
-  font-size: 15px;
-  text-align : center;
-  margin-top: 10px;
-`;
-
-const PurposeBarBox = styled.div`
-  display : flex;
-  justify-content : center; 
-`;
-
-const Listbox = styled.div`
-  width: 100%;
-  height: 100%;
-  min-height: 350px;
-  margin : 1px;
-  box-shadow: 0 0 8px 0 #bcbcbc;
-  border-radius: 16px;
-  display: grid;
-
-  .List {
-    margin: 5px 10px;
-    text-align: initial;
-  }
-`
 
 function Post5(props){
   const { isLogin } = props;
@@ -94,22 +57,37 @@ function Post5(props){
   }
 
   function Purpose({ purpose, onToggle }) {
+    const navigate = useNavigate();
     return (
-      <b
+      <div>
+      <button
         style = {{
+          width: '110px',
+          height: '30px',
+          border: 'none',
+          borderRadius: '16px',
+          marginLeft: '55px',
+          backgroundColor: 'rgb(193, 225, 164)',
+          fontSize:'16px',
           cursor:'pointer',
-          color: purpose.active ? 'black' : '#bcbcbc'
+          color: purpose.active ? 'black' : 'gray',
+          fontWeight: purpose.active ? 'bold' : ''
         }}
         onClick = {()=> onToggle(purpose.id)}
       >
       {purpose.purname}
-      </b>
+      </button>
+
+        <div className='more' onClick={()=>{navigate(`/${purpose.purname}`);}}>
+        ->more
+        </div>
+
+      </div>
     );
   }
 
 
   function PostList({postList}) {
-
     return (
       postList.map((post) =>
       <PostListItem
@@ -129,28 +107,23 @@ function Post5(props){
                   isLogin={isLogin}
                 />
         )
-      
-      
     );
   }
 
+    
+ 
+
   return (
-    <TotalBox>
-      <Listbox>
-        <PurposeBarBox>
+    <div className='categoryBox'>
           {purposes.map(purpose => (
-            <PurposeBox key={purpose.id}>
+            <>
+            <div className='categorybuttonbox' key={purpose.id}>
               <Purpose purpose={purpose} key={purpose.id} onToggle={onToggle}/>
-            </PurposeBox>
+            </div>
+            </>
           ))}
-        </PurposeBarBox>
-        <div className='List'>
-          <PostList 
-          postList={postList} onToggle={onToggle}  isLogin={isLogin}  />
-        </div>
-      </Listbox>
-      
-    </TotalBox>
+      <PostList postList={postList} isLogin={isLogin}/>
+    </div>
   );
 }
 

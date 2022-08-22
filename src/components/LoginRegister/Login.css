@@ -1,0 +1,104 @@
+.login{
+    font-size: 13px;
+    color: #696969;
+    position: absolute;
+    top: 10%;
+    left: 49%;
+    font-weight: bold;
+}
+.logintotalbox{
+    width: 600px;
+    height: 400px;
+    position: relative;
+    margin : 50px auto;
+}
+.loginboxleft {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 0 5px 0 #bcbcbc;
+    background-color: rgb(193, 225, 164);
+    width: 180px;
+    height: 230px;
+    position: absolute;
+    top : 20%;
+    left: 5%;
+}
+.logintextbox{
+    border: 2px solid white;
+    border-radius: 16px;
+    text-align: center;
+    width: 150px;
+    height: 75px;
+    position: absolute;
+    top : 45%;
+    left: 8%;
+    font-size: 16px;
+    color: white;
+    padding: 15px 0px;
+    font-weight: bold
+}
+
+.loginboxright {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 0 5px 0 #bcbcbc;
+    width: 350px;
+    height: 230px;
+    position: absolute;
+    top : 20%;
+    left: 37%;
+}
+.loginibox{
+    width: 220px;
+    height: 80px;
+    position: absolute;
+    top: 15%;
+    right: 40%
+}
+.logininput {
+    border: 2px solid #bcbcbc;
+    border-radius: 10px;
+    display: inline-block;
+    width: 200px;
+    height: 37px;
+    margin-left: 30px;
+    padding: 3px;
+    margin-top: 6px;
+}
+.loginbutton {
+    border: 2px solid #bcbcbc;
+    border-radius: 10px;
+    width: 80px;
+    height: 95px;
+    position: absolute;
+    right: 9%;
+    top:18%;
+    background-color: white;
+    cursor: pointer;
+    justify-content: center;
+    color: #696969;
+}
+.idpwb{
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    top: 65%;
+    left: 18%;
+    font-size: 8px;
+    background-color: white;
+    color:#696969;
+    border: none;
+    cursor: pointer;
+}
+.regb{
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    top: 65%;
+    right: 20%;
+    font-size: 8px;
+    background-color: white;
+    color:#696969;
+    border: none;
+    cursor: pointer;
+}
