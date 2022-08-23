@@ -39,7 +39,7 @@ public class CommentController {
 
     @GetMapping("/api/comment/data/{postid}")
     @ResponseBody
-    public List<Comment> getCategoryData(@PathVariable("postid") Integer postid) {
+    public List<Comment> getPostidData(@PathVariable("postid") Integer postid) {
         return commentService.getPostidData(postid);
     }
 
@@ -53,5 +53,11 @@ public class CommentController {
     @ResponseBody
     public List<Comment> getWriteridData(@PathVariable String writerid) {
         return commentService.getWriteridData(writerid);
+    }
+
+    @GetMapping("/api/comment/all")
+    @ResponseBody
+    public List<Comment> getAllData(){
+        return commentService.getAllData();
     }
 }

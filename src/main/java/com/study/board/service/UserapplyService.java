@@ -1,7 +1,6 @@
 package com.study.board.service;
 
-import com.study.board.entity.Comment;
-import com.study.board.entity.Userapply;
+import com.study.board.entity.Board;
 import com.study.board.entity.Userapply;
 import com.study.board.repository.UserapplyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +27,11 @@ public class UserapplyService {
     @Transactional
     public List<Userapply> getPostidData(Integer postid){
         return userapplyRepository.findByPostidContaining(postid);
+    }
+
+    @Transactional
+    public List<Userapply> getUseridData(String userid){
+        return userapplyRepository.findByUseridContaining(userid);
     }
 
 }

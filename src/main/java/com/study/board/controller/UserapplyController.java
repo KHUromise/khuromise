@@ -1,5 +1,6 @@
 package com.study.board.controller;
 
+import com.study.board.entity.Board;
 import com.study.board.entity.Comment;
 import com.study.board.entity.Userapply;
 import com.study.board.service.UserapplyService;
@@ -28,7 +29,13 @@ public class UserapplyController {
 
     @GetMapping("/api/userapply/id/{postid}")
     @ResponseBody
-    public List<Userapply> getCategoryData(@PathVariable("postid") Integer postid) {
+    public List<Userapply> getPostidData(@PathVariable("postid") Integer postid) {
         return userapplyService.getPostidData(postid);
+    }
+
+    @GetMapping("/api/userapply/data/{userid}")
+    @ResponseBody
+    public List<Userapply> getCategoryData(@PathVariable String userid) {
+        return userapplyService.getUseridData(userid);
     }
 }

@@ -35,4 +35,15 @@ public class UserController {
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
+
+    @DeleteMapping("/api/delete/user/{id}")
+    public String deleteUser(@PathVariable("id") Integer id, @RequestBody User user, Model model){
+
+        userService.delete(id);
+
+        model.addAttribute("message","회원 탈퇴되었습니다.");
+        model.addAttribute("searchUrl", "/");
+
+        return "message";
+    }
 }

@@ -39,4 +39,8 @@ public class CommentService {
         return commentRepository.findByWriteridContaining(writerid);
     }
 
+    public List<Comment> getAllData() {
+        return commentRepository.findAllByOrderById();
+    }
+
 }

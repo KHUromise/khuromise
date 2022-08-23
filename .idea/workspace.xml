@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9dfcc8c3-9a55-4b81-8397-78138e7da488" name="Changes" comment="신청 기능 API">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/controller/UserapplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/controller/UserapplyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/entity/Userapply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/entity/Userapply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/repository/CommentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/repository/UserapplyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/repository/UserapplyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/service/UserapplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/service/UserapplyService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661230395403</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="신청 기능 API">
+      <created>1661232054597</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1661232054597</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
