@@ -1,21 +1,20 @@
 package com.study.board.controller;
 
 import com.study.board.entity.Comment;
-import com.study.board.entity.UserApply;
-import com.study.board.service.CommentService;
-import com.study.board.service.UserApplyService;
+import com.study.board.entity.Userapply;
+import com.study.board.service.UserapplyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class UserApplyController {
+public class UserapplyController {
     @Autowired
-    private UserApplyService userapplyService;
+    private UserapplyService userapplyService;
 
     @PostMapping("/api/userapply")
-    public String createComment(@RequestBody UserApply userapply, Model model) {
+    public String createApply(@RequestBody Userapply userapply, Model model) {
 
         userapplyService.write(userapply);
 
@@ -27,7 +26,7 @@ public class UserApplyController {
 
     @GetMapping("/api/userapply/id/{id}")
     @ResponseBody
-    public UserApply getIdData(@PathVariable("id") Integer id) {
+    public Userapply getIdData(@PathVariable("id") Integer id) {
         return userapplyService.view(id);
     }
 }

@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dfcc8c3-9a55-4b81-8397-78138e7da488" name="Changes" comment="댓글 API 기능">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/board/controller/UserApplyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/board/entity/UserApply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/board/repository/UserApplyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/board/service/UserApplyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/entity/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/entity/Board.java" afterDir="false" />
+    <list default="true" id="9dfcc8c3-9a55-4b81-8397-78138e7da488" name="Changes" comment="신청 기능 API">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/controller/UserApplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/controller/UserapplyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/entity/UserApply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/entity/Userapply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/repository/UserApplyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/repository/UserapplyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/board/service/UserApplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/board/service/UserapplyService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661100199920</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="신청 기능 API">
+      <created>1661229929540</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1661229929540</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,6 +200,7 @@
     <MESSAGE value="댓글 삭제 추가" />
     <MESSAGE value="옛날 데이터 제거" />
     <MESSAGE value="댓글 API 기능" />
-    <option name="LAST_COMMIT_MESSAGE" value="댓글 API 기능" />
+    <MESSAGE value="신청 기능 API" />
+    <option name="LAST_COMMIT_MESSAGE" value="신청 기능 API" />
   </component>
 </project>

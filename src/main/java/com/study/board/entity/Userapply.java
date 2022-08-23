@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Entity
 @Data
 @Table(schema="userapply")
-public class UserApply {
+public class Userapply {
 
     @Id
     public Integer id;
