@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 public class UserapplyController {
     @Autowired
@@ -24,9 +26,9 @@ public class UserapplyController {
         return "message";
     }
 
-    @GetMapping("/api/userapply/id/{id}")
+    @GetMapping("/api/userapply/id/{postid}")
     @ResponseBody
-    public Userapply getIdData(@PathVariable("id") Integer id) {
-        return userapplyService.view(id);
+    public List<Userapply> getCategoryData(@PathVariable("postid") Integer postid) {
+        return userapplyService.getPostidData(postid);
     }
 }
